@@ -118,7 +118,7 @@ body {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 10px;
-  color: var(--ink);
+  color: var(--noir);
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
 }
