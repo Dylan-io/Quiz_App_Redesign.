@@ -8,7 +8,7 @@
   --bg: #eceff5;
   --card: #ffffff;
   --noir: #14213d;
-  --ink-soft: #5a6484;
+  --soft: #5a6484;
   --ink-muted: #9aa2ba;
   --line: #dde2ec;
   --accent: #3a56d4;
@@ -35,3 +35,154 @@ body {
   max-width: 460px;
 }
 
+
+.quiz-head {
+  margin-bottom:1.5rem;
+}
+ 
+.titre-quiz {
+  font-size: clamp(1.75rem, 5vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+ 
+.quiz-sous-titre {
+  color: var(--soft);
+  font-size: 0.95rem;
+}
+
+
+
+
+.card {
+  background: var(--card);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 2em;
+}
+ 
+.is-hidden {
+  display: none;
+}
+
+
+
+.progress {
+  margin-bottom: 1.5rem;
+}
+ 
+.progress-text {
+  font-size: 0.95rem;
+  color: var(--soft);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+ 
+.progress-track {
+  height: 9px;
+  background: var(--line);
+  border-radius: 100px;
+  overflow: hidden;
+}
+ 
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+
+
+
+.question {
+  /* font-family: "Space Grotesk", sans-serif; */
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+ 
+
+.options {
+  display: grid;
+  gap: 0.6rem;
+}
+ 
+.option {
+  /* font: inherit; */
+  text-align: left;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+ 
+.option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+ 
+.option:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+ 
+.option:disabled {
+  cursor: default;
+}
+ 
+.option.is-correct {
+  background: var(--success-soft);
+  border-color: var(--success);
+  color: var(--success);
+  font-weight: 500;
+}
+ 
+.option.is-wrong {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  color: var(--danger);
+  font-weight: 500;
+}
+ 
+/* ---------- Feedback ---------- */
+.feedback {
+  min-height: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+ 
+.feedback.is-correct { color: var(--success); }
+.feedback.is-wrong   { color: var(--danger); }
+ 
+/* ---------- Boutons ---------- */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+ 
+.btn {
+  font: inherit;
+  font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+ 
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+ 
+.btn--primary:hover:not(:disabled) {
+  opacity: 0.88;
+}
